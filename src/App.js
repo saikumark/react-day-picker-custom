@@ -16,8 +16,8 @@ class App extends Component{
     this.toMonth.setMonth(this.toMonth.getMonth()+2);
 
     this.state = {
-      selectedDay: undefined,
-      month: this.fromMonth,
+      selectedDay: this.today, //Set default selected date while loading calendar
+      month: this.fromMonth, //From which month the calendar should allow visitor to select
     };
   }
 
@@ -44,7 +44,6 @@ class App extends Component{
   handleYearMonthChange(month) {
     this.setState({ month:month });
   }
-
 
   render() {
 
